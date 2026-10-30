@@ -2,8 +2,8 @@ package es.us.dp1.chess.tournament.match;
 
 import java.util.Optional;
 
-public interface TournamentRepository {
+import org.springframework.data.repository.CrudRepository;
 
-    Optional<Tournament> findById(int i);
+public interface TournamentRepository extends CrudRepository<Tournament, Integer>{
     
 }

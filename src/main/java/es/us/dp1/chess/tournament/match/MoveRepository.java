@@ -2,8 +2,8 @@ package es.us.dp1.chess.tournament.match;
 
 import java.util.Optional;
 
-public interface MoveRepository {
+import org.springframework.data.repository.CrudRepository;
 
-    Optional<Move> findById(int i);
-    
+public interface MoveRepository extends CrudRepository<Move, Integer>{
+        
 }
