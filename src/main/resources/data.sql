@@ -170,3 +170,21 @@ INSERT INTO piece (id, board_id, color, type_name)
 VALUES 
   (6000, 106, 'WHITE', 'KING'),
   (6001, 106, 'BLACK', 'KING');
+
+-- añadir los siguientes torneos con los campos: id, name, location, startDate, endDate, maxParticipants
+INSERT INTO tournament (id, name, location, start_date, end_date, max_participants)
+VALUES 
+  (1, 'Abierto de Ajedrez Villa de Los Palacios y Vfca.', 'Circulo Joven, Los Palacios y Villafranca', '2024-11-10 09:00:00', '2024-11-12 17:00:00', 100),
+  (2, 'Torneo en Honor de José Maestre Amuedo', 'Club cultural El Casino', '1990-09-17 17:00:00', '1990-09-20 21:00:00', 100);
+
+-- añadir los siguientes movimientos con los atributos: id:1,2 , turn:1,7; originX:4,7; originY:2,5; destinationX:4,5; destinationY:4,6
+INSERT INTO move (id, turn, originx, originy, destinationx, destinationy, piece_id, match_id, capture_id)
+VALUES 
+  (1, 1, 4, 2, 4, 4, 131, 15, NULL),
+  (2, 7, 7, 5, 5, 6, 5001, 5, 5002);
+
+INSERT INTO tournament_matches(matches_id, tournament_id)
+VALUES 
+  (15, 1),
+  (5, 2),
+  (6, 2);
